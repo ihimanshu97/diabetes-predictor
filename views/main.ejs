@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2/dist/tf.min.js">
+    </script>
+</head>
+
+<body>
+    <main>
+        <form action="#">
+            <h1 class="title">Diabetes Predictor</h1>
+            <div class="progress">
+                <div class="progress-bar"></div>
+                <span class="progress-step visited">1</span>
+                <span class="progress-step">2</span>
+                <span class="progress-step">3</span>
+            </div>
+            <div class="form-step form-active">
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" min="0" max="120">
+                    <small class="error-msg">Value must be between 0 and 120</small>
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (in kg)</label>
+                    <input type="number" id="weight" min="3" max="500">
+                    <small class="error-msg">Value must be 3 between and 500</small>
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (in cm)</label>
+                    <input type="number" id="height" min="50" max="280">
+                    <small class="error-msg">Value must be between 50 and 280</small>
+                </div>
+                <div class="input-group btn-group">
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+            </div>
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="pregnencies">Pregnencies</label>
+                    <input type="number" id="pregnencies" min="0" max="15">
+                    <small class="error-msg">Value must be between 0 and 15</small>
+                </div>
+                <div class="input-group">
+                    <label for="glucose">Glucose</label>
+                    <input type="number" id="glucose" min="1" max="250">
+                    <small class="error-msg">Value must be between 1 and 250</small>
+                </div>
+                <div class="input-group">
+                    <label for="bp">Blood Pressure</label>
+                    <input type="number" id="bp" min="40" max="200">
+                    <small class="error-msg">Value must be between 40 and 200</small>
+                </div>
+                <div class="input-group btn-group">
+                    <button type="button" class="btn btn-prev">Back</button>
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+            </div>
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="insulin">Insulin</label>
+                    <input type="number" id="insulin" min="0" max="1000">
+                    <small class="error-msg">Value must be between 0 and 1000</small>
+                </div>
+                <div class="input-group">
+                    <label for="skinThickness">Skin Thickness (in mm)</label>
+                    <input type="number" id="skinThickness" min="1" max="100">
+                    <small class="error-msg">Value must be between 1 and 100</small>
+                </div>
+                <div class="input-group">
+                    <label for="dpf">Diabetes Pedigree Function</label>
+                    <input type="number" step="any" id="dpf" min="0" max="3">
+                    <small class="error-msg">Value must be between 0 and 3</small>
+                </div>
+                <div class="input-group btn-group">
+                    <button type="button" class="btn btn-prev">Back</button>
+                    <input type="submit" class="btn" value="Submit">
+                </div>
+            </div>
+        </form>
+        <div class="result-div">
+            <div id="result">
+                <img id="result-img" src="" alt="result">
+                <b id="result-msg"></b>
+                <div><button class="btn" id="new-test">New Test</button></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Built by <a href="https://github.com/Durga-Prakash-M" target="_blank" class="footer-link">Durgaprakash
+            Madishetty</a> and <a href="https://github.com/himanshuat" target="_blank" class="footer-link">Himanshu
+            Tegyalwar</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
